@@ -14,7 +14,7 @@
 		C67CE5E21DB1CC5E00999A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67CE5E01DB1CC5E00999A45 /* LaunchScreen.storyboard */; };
 		C67CE5ED1DB1CC5E00999A45 /* BackgroundAudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE5EC1DB1CC5E00999A45 /* BackgroundAudioTests.swift */; };
 		C67CE5F81DB1CC5E00999A45 /* BackgroundAudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67CE5F71DB1CC5E00999A45 /* BackgroundAudioUITests.swift */; };
-		C67CE6071DB1CEA700999A45 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C67CE6061DB1CEA700999A45 /* sample.mp3 */; };
+		C6C4AED41DB2AFFF00B6DFDE /* shelter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C4AED31DB2AFFF00B6DFDE /* shelter.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		C67CE5F31DB1CC5E00999A45 /* BackgroundAudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundAudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67CE5F71DB1CC5E00999A45 /* BackgroundAudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAudioUITests.swift; sourceTree = "<group>"; };
 		C67CE5F91DB1CC5E00999A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C67CE6061DB1CEA700999A45 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		C6C4AED31DB2AFFF00B6DFDE /* shelter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shelter.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		C67CE6051DB1CD7200999A45 /* music */ = {
 			isa = PBXGroup;
 			children = (
-				C67CE6061DB1CEA700999A45 /* sample.mp3 */,
+				C6C4AED31DB2AFFF00B6DFDE /* shelter.mp3 */,
 			);
 			name = music;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67CE5E21DB1CC5E00999A45 /* LaunchScreen.storyboard in Resources */,
-				C67CE6071DB1CEA700999A45 /* sample.mp3 in Resources */,
 				C67CE5DF1DB1CC5E00999A45 /* Assets.xcassets in Resources */,
 				C67CE5DD1DB1CC5E00999A45 /* Main.storyboard in Resources */,
+				C6C4AED41DB2AFFF00B6DFDE /* shelter.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +531,7 @@
 				C67CE5FE1DB1CC5E00999A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C67CE5FF1DB1CC5E00999A45 /* Build configuration list for PBXNativeTarget "BackgroundAudioTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +540,7 @@
 				C67CE6011DB1CC5E00999A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C67CE6021DB1CC5E00999A45 /* Build configuration list for PBXNativeTarget "BackgroundAudioUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +549,7 @@
 				C67CE6041DB1CC5E00999A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

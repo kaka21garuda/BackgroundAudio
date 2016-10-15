@@ -11,7 +11,14 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-   var audioPlayer = AVAudioPlayer()
+   
+    var audioPlayer: AVAudioPlayer?
+    
+    
+    
+    
+    
+    
     
     
     
@@ -21,30 +28,37 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "sample", ofType: "mp3")!))
-            audioPlayer.prepareToPlay()
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "shelter", ofType: "mp3")!))
+            audioPlayer?.prepareToPlay()
+            print("preparation success")
             
-            var audioSession = AVAudioSession.sharedInstance()
+            let audioSession = AVAudioSession.sharedInstance()
             
             do {
                 try audioSession.setCategory(AVAudioSessionCategoryPlayback)
                 print("AVAudioSession Category Playback OK")
                 
+                do {
+                    try audioSession.setActive(true)
+
+                } catch let error as NSError{
+                    print("setActive error")
+                }
+            
+            
             } catch let error as NSError {
+                print("***********************")
                 print(error.localizedDescription)
             }
 
         } catch {
-            print(error)
+            print("##########################")
+            print(error.localizedDescription)
         }
         
         
-       
-        
-    
-        
-        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,14 +66,15 @@ class ViewController: UIViewController {
 
 
     @IBAction func play(_ sender: AnyObject) {
-        audioPlayer.play()
+        print("play music")
+        audioPlayer?.play()
         
         
     }
     
     @IBAction func pause(_ sender: AnyObject) {
-        if audioPlayer.isPlaying {
-            audioPlayer.pause()
+        if (audioPlayer?.isPlaying)! {
+            audioPlayer?.pause()
         } else {
             print("Audio is not playing!")
         }
@@ -67,11 +82,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func restart(_ sender: AnyObject) {
-        if audioPlayer.isPlaying {
-            audioPlayer.pause()
+        if (audioPlayer?.isPlaying)! {
+            
+            audioPlayer?.currentTime = 0
+            audioPlayer?.play()
+        } else {
+            audioPlayer?.play()
         }
-        audioPlayer.currentTime = 0
-        audioPlayer.play()
+        
     }
 
 }
